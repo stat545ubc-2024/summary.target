@@ -1,0 +1,20 @@
+Package: summary.target
+Title: Summarize a Target Numeric Variable in a Data Frame by Specified Grouping Variables
+Version: 0.1.0
+Authors@R: 
+    person("Zhili", "Jiang", email = "zhili.jiang@stat.ubc.ca", role = c("aut", "cre"))
+Description: Provides a convenient function for computing summary statistics, including mean,
+  minimum, maximum, and standard deviation, on a specified numeric column in a data frame, 
+  grouped by selected categorical variables. 
+  This package aims to simplify grouped data analysis for users working with tidy data.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Imports:
+    dplyr,
+    stats
+Suggests:
+    datateachr,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3

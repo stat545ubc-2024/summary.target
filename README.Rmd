@@ -1,24 +1,34 @@
+---
+output: github_document
+---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
 
 # summary.target
 
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of summary.target is to provide a convenient function for
-computing the summary statistics for a specific numeric column in a data
-frame, grouped by one or more specified categorical columns.
+The goal of summary.target is to provide a convenient function for computing the summary statistics for a specific numeric column in a data frame, grouped by one or more specified categorical columns.
 
 The specific summary statistics calculated are as follows:
 
--   Mean
+- Mean
 
--   Minimum
+- Minimum
 
--   Maximum
+- Maximum
 
--   Standard deviation
+- Standard deviation
 
 ## Installation
 
@@ -36,29 +46,21 @@ devtools::install_github("zhili617/summary.target")
 
 ### This is a basic example which shows you how to solve a common problem:
 
-``` r
+```{r example}
 library(summary.target)
 library(datateachr) #To ensure be able to use the dataset steam_games
 
 # The code there summarize the 'discount_price' variable grouped by 'types' in the steam_games dataset.
 summarize_target(datateachr::steam_games, "types", "discount_price")
-#> # A tibble: 4 × 5
-#>   types   mean   min   max     sd
-#>   <chr>  <dbl> <dbl> <dbl>  <dbl>
-#> 1 app     51.9  0    963.  102.  
-#> 2 bundle  26.9  0.58 708.   35.9 
-#> 3 sub     11.4  0.49  60.0   9.08
-#> 4 <NA>    24.0 24.0   24.0  NA
 ```
 
 ### Handling Errors
 
-This function including error handling to check for invalid inputs. For
-example, if a grouping variable does not exist in the dataset,
-summary.target will return an informative error message.
-
-``` r
+This function including error handling to check for invalid inputs. For example, if a grouping variable does not exist in the dataset, summary.target will return an informative error message. 
+```{r handdling error, error = TRUE}
 # Since "color" is not a column in steam_games, it will return an informative error message.
 summarize_target(datateachr::steam_games, "color", "discount_price")
-#> Error in summarize_target(datateachr::steam_games, "color", "discount_price"): Sorry, all color should be columns inside of your 'data'.
 ```
+
+
+
