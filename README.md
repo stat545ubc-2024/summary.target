@@ -28,6 +28,9 @@ You can install the development version of summary.target like so:
 # If you haven't install the devtools package, please install it
 install.packages("devtools")
 
+#Load the devtools Library
+library(devtools)
+
 # Then you can install the summary.target package from github
 devtools::install_github("stat545ubc-2024/summary.target")
 ```
