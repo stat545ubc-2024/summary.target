@@ -31,6 +31,9 @@ install.packages("devtools")
 #Load the devtools Library
 library(devtools)
 
+#If an error occurs say "Loading required package: usethis", then load usethis before load devtools.
+library(usethis)
+
 # Then you can install the summary.target package from github
 devtools::install_github("stat545ubc-2024/summary.target")
 ```
