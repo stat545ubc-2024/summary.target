@@ -29,7 +29,7 @@ You can install the development version of summary.target like so:
 install.packages("devtools")
 
 # Then you can install the summary.target package from github
-devtools::install_github("zhili617/summary.target")
+devtools::install_github("stat545ubc-2024/summary.target")
 ```
 
 ## Examples
